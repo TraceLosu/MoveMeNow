@@ -1,5 +1,6 @@
 message: "%kickmsg%"
 servername: "server2"
+output-message-to-console: true
 mode: whitelist
 list:
 - ban

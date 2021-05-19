@@ -63,6 +63,8 @@ public class PlayerListener implements Listener {
                             ev.getPlayer().sendMessage(TextComponent.fromLegacyText(
                                     ChatColor.translateAlternateColorCodes('&', line)));
                         }
+                        if(plugin.getConfig().getBoolean("output-message-to-console"))
+                            plugin.getLogger().info(ChatColor.RED + ev.getPlayer().getName() + "was moved to cancel server due to " + reason);
                     }
                     break; // no need to keep this up !
                 }
@@ -81,6 +83,8 @@ public class PlayerListener implements Listener {
                     ev.getPlayer().sendMessage(TextComponent.fromLegacyText(
                             ChatColor.translateAlternateColorCodes('&', line)));
                 }
+                if(plugin.getConfig().getBoolean("output-message-to-console"))
+                    plugin.getLogger().info(ChatColor.RED + ev.getPlayer().getName() + " was moved to cancel server due to " + reason);
             }
         }
     }
